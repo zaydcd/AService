@@ -36,91 +36,67 @@
         </section>
 
         <section class="booking">
-          <h2>Запись на сервис</h2>
-          <form action="send/send.php" method="post">
-            <div class="form-row">
-              <label for="client-name">Ваше имя *</label>
-              <input
-                type="text"
-                id="client-name"
-                name="name"
-                required
-                placeholder="Иван Иванов"
-              />
-            </div>
+          <h1>Виды работ и цены</h1>
 
-            <div class="form-row">
-              <label for="client-phone">Телефон *</label>
-              <input
-                type="tel"
-                id="client-phone"
-                name="phone"
-                required
-                placeholder="+7 900 000‑00‑00"
-              />
-            </div>
-
-            <div class="form-row">
-              <label for="client-email">E‑mail</label>
-              <input
-                type="email"
-                id="client-email"
-                name="email"
-                placeholder="example@mail.ru"
-              />
-            </div>
-
-            <div class="form-row" >
-              <label for="car-brand">Марка авто *</label>
-              <select id="car-brand" name="brand" required>
-                <option value="">Выберите марку</option>
-                <option value="BMW">BMW</option>
-                <option value="Audi">Audi</option>
-                <option value="other">Другая</option>
-              </select>
-            </div>
-            <div class="form-row is-hidden" id="auto-other">
-              <label for="car-brand">Другая марка авто *</label>
-              <input id="car-brand-other" name="brand-other" type="text"
-                placeholder="Лада Ларгус"
-              </input>
-            </div>
-
-            <div class="form-row">
-              <label for="service-type">Тип работ *</label>
-              <select id="service-type" name="service" required>
-                <option value="">Выберите услугу</option>
-                <option value="diagnostic">Диагностика</option>
-                <option value="oil">Замена масла</option>
-                <option value="brakes">Тормозная система</option>
-                <option value="suspension">Подвеска</option>
-                <option value="electro">Электрика</option>
-                <option value="other">Другое</option>
-              </select>
-            </div>
-
-            <div class="form-row">
-              <label for="date">Желаемая дата</label>
-              <input type="date" id="date" name="date" />
-            </div>
-
-            <div class="form-row">
-              <label for="time">Желаемое время</label>
-              <input type="time" id="time" name="time" />
-            </div>
-
-            <div class="form-row">
-              <label for="comment">Комментарий</label>
-              <textarea
-                id="comment"
-                name="comment"
-                rows="3"
-                placeholder="Укажите дополнительную информацию по неисправности"
-              ></textarea>
-            </div>
-
-            <button type="submit">Отправить заявку</button>
-          </form>
+<table>
+  <thead>
+    <tr>
+      <th>Вид работ</th>
+      <th>Описание</th>
+      <th>Цена (руб.)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Диагностика двигателя</td>
+      <td>Компьютерная диагностика двигателя BMW/Audi</td>
+      <td>1500</td>
+    </tr>
+    <tr>
+      <td>Замена масла</td>
+      <td>С заменой фильтра и расходников</td>
+      <td>1200</td>
+    </tr>
+    <tr>
+      <td>Замена тормозных колодок</td>
+      <td>Передние или задние (пара)</td>
+      <td>1500</td>
+    </tr>
+    <tr>
+      <td>Замена свечей зажигания</td>
+      <td>Бензиновые двигатели BMW/Audi</td>
+      <td>1200</td>
+    </tr>
+    <tr>
+      <td>Ремонт подвески</td>
+      <td>Замена сайлент‑блоков, амортизаторов</td>
+      <td>от 1500</td>
+    </tr>
+    <tr>
+      <td>Ремонт коробки передач</td>
+      <td>Компьютерная диагностика и ремонт</td>
+      <td>от 1600</td>
+    </tr>
+    <tr>
+      <td>Кузовной ремонт</td>
+      <td>Восстановление геometrии, покраска</td>
+      <td>расчёт индивидуально</td>
+    </tr>
+    <tr>
+      <td>Ремонт кондиционера</td>
+      <td>Диагностика и заправка</td>
+      <td>3000</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2">
+        Точная стоимость определяется после диагностики автомобиля.
+      </td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
         </section>
       </div>
     </main>
