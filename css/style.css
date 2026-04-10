@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  /*background: url("https://placehold.co/1920x1080?text=Автосервис+фон")
+          no-repeat center center fixed;
+        background-size: cover; */ /* адаптивный фон */ /* [web:24][web:25][web:27][web:29] */
+  display: flex;
+  flex-direction: column;
+}
+header {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.worktime {
+  font-size: 24px;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.content-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.intro {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 16px;
+  border-radius: 10px;
+  flex: 1 1 280px;
+  min-width: 260px;
+}
+.intro h1 {
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+.cars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+.cars img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border: 2px solid #fff;
+  border-radius: 8px;
+}
+
+.booking {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 320px;
+  max-width: 480px;
+  width: 100%;
+}
+.booking h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.booking form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-row {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 14px;
+}
+.form-row label {
+  margin-bottom: 4px;
+}
+.form-row input,
+.form-row select,
+.form-row textarea {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #000;
+}
+.booking button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background: #00b3ff;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.booking button:hover {
+  background: #008fd1;
+}
+
+.zoom {
+: transform 0.3s ease; /* Плавность анимации (0.3 секунды) */
+  cursor: pointer;
+}
+
+.zoom:hover {
+  transform: scale(1.5);
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 10px 16px;
+  text-align: center;
+  font-size: 14px;
+}
+footer a {
+  color: #00ccff;
+  text-decoration: none;
+  margin: 0 5px;
+  word-break: break-all;
+}
+
+/* Адаптивные правки для мелких экранов */ /* [web:21][web:22][web:23][web:28] */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .worktime {
+    font-size: 13px;
+  }
+  nav {
+    justify-content: flex-start;
+  }
+  .intro h1 {
+    font-size: 20px;
+  }
+  .cars img {
+    width: 45vw;
+    height: 30vw;
+    max-width: 180px;
+    max-height: 120px;
+  }
+  .booking {
+    max-width: 100%;
+  }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+
+  font-size: 14px;
+}
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background: #04223f;
+  font-weight: bold;
+}
+tfoot {
+  font-weight: bold;
+  background: #024522;
+}
+.block {
+  position: relative;
+  z-index: 1;
+  padding: 50px;
+}
+.block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("../img/ФонСервиса.jpeg") center/cover no-repeat;
+  opacity: 0.5; /* степень бледности */
+  z-index: -1;
+}
+.is-hidden {
+  display: none;
+}
+.is-display {
+  display: block;
+}
+.services-card {
+        background: rgba(25, 150, 138, 0.95);
+        padding: 16px;
+        border-radius: 10px;
+        max-width: 900px;
+        width: 100%;
+        overflow-x: auto;
+      }
+      .services-card h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: #222;
+      }
