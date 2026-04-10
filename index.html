@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Автосервис иномарки и отчественные авто</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="js/javs.js" defer></script>
+  </head>
+  <body class="block">
+    <header>
+      <div class="worktime">Режим работы: ежедневно с 9:00 до 18:00</div>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="map.html">Схема проезда</a>
+        <a href="services.html">Услуги и цены</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content-wrapper">
+        <section class="intro">
+          <h1>Автосервис иномарки и отчечественные авто</h1>
+          <p>
+            Профессиональный ремонт и обслуживание иномарок и отечественных
+            автомобилей.
+          </p>
+
+          <div class="cars "">
+            <img src="img/lexus.jpeg" alt="Lexus" class="zoom"/>
+            <img src="img/bmw.jpg" alt="BMW" class="zoom"/>
+            <img src="img/audi.jpeg" alt="Audi" class="zoom"/>
+            <img src="img/ladaVesta.jpeg" alt="Vesta" class="zoom"/>
+          </div>
+        </section>
+
+        <section class="booking">
+          <h2>Запись на сервис</h2>
+          <form action="send/send.php" method="post">
+            <div class="form-row">
+              <label for="client-name">Ваше имя *</label>
+              <input
+                type="text"
+                id="client-name"
+                name="name"
+                required
+                placeholder="Иван Иванов"
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="client-phone">Телефон *</label>
+              <input
+                type="tel"
+                id="client-phone"
+                name="phone"
+                required
+                placeholder="+7 900 000‑00‑00"
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="client-email">E‑mail</label>
+              <input
+                type="email"
+                id="client-email"
+                name="email"
+                placeholder="example@mail.ru"
+              />
+            </div>
+
+            <div class="form-row" >
+              <label for="car-brand">Марка авто *</label>
+              <select id="car-brand" name="brand" required>
+                <option value="">Выберите марку</option>
+                <option value="BMW">BMW</option>
+                <option value="Audi">Audi</option>
+                <option value="other">Другая</option>
+              </select>
+            </div>
+            <div class="form-row is-hidden" id="auto-other">
+              <label for="car-brand">Другая марка авто *</label>
+              <input id="car-brand-other" name="brand-other" type="text"
+                placeholder="Лада Ларгус"
+              </input>
+            </div>
+
+            <div class="form-row">
+              <label for="service-type">Тип работ *</label>
+              <select id="service-type" name="service" required>
+                <option value="">Выберите услугу</option>
+                <option value="diagnostic">Диагностика</option>
+                <option value="oil">Замена масла</option>
+                <option value="brakes">Тормозная система</option>
+                <option value="suspension">Подвеска</option>
+                <option value="electro">Электрика</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="date">Желаемая дата</label>
+              <input type="date" id="date" name="date" />
+            </div>
+
+            <div class="form-row">
+              <label for="time">Желаемое время</label>
+              <input type="time" id="time" name="time" />
+            </div>
+
+            <div class="form-row">
+              <label for="comment">Комментарий</label>
+              <textarea
+                id="comment"
+                name="comment"
+                rows="3"
+                placeholder="Укажите дополнительную информацию по неисправности"
+              ></textarea>
+            </div>
+
+            <button type="submit">Отправить заявку</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      Тел: <a href="tel:+79375817104">+7 (937) 581-71 04</a> Email:
+      <a href="mailto:info@avtoservis.ru">info@avtoservis.ru</a>
+    </footer>
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var brandSelect = document.getElementById('car-brand');
+
+    if (!brandSelect) return;
+
+    brandSelect.addEventListener('change', function () {
+      var value = brandSelect.value;
+      var comment = document.getElementById('auto-other');
+      if (comment) {
+        
+        var comment = document.getElementById('auto-other');
+        if (value === 'other') {
+          comment.style.display='block'
+          comment.focus();
+        }
+      
+      else
+      comment.style.display='none';
+    }
+  });
+  });
+</script>
+  </body>
+</html>

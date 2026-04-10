@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Услуги и цены</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      header {
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 10px 16px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      header nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      header nav a {
+        color: white;
+        text-decoration: none;
+        padding: 4px 8px;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        font-size: 14px;
+      }
+
+      main {
+        flex: 1;
+        padding: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      /* Адаптив: таблица прокручивается, текст читаемый на мобиле */ /* [web:26][web:30] */
+      @media (max-width: 600px) {
+        .services-card {
+          padding: 12px;
+        }
+        table {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+  <body class="block">
+    <header>
+      <span>Автосервис иномарки и отечественные авто — услуги и цены</span>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="map.html">Схема проезда</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="services-card">
+        <h1>Виды работ и цены</h1>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Вид работ</th>
+              <th>Описание</th>
+              <th>Цена (руб.)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Диагностика двигателя</td>
+              <td>Компьютерная диагностика двигателя BMW/Audi</td>
+              <td>1500</td>
+            </tr>
+            <tr>
+              <td>Замена масла</td>
+              <td>С заменой фильтра и расходников</td>
+              <td>1200</td>
+            </tr>
+            <tr>
+              <td>Замена тормозных колодок</td>
+              <td>Передние или задние (пара)</td>
+              <td>1500</td>
+            </tr>
+            <tr>
+              <td>Замена свечей зажигания</td>
+              <td>Бензиновые двигатели BMW/Audi</td>
+              <td>1200</td>
+            </tr>
+            <tr>
+              <td>Ремонт подвески</td>
+              <td>Замена сайлент‑блоков, амортизаторов</td>
+              <td>от 1500</td>
+            </tr>
+            <tr>
+              <td>Ремонт коробки передач</td>
+              <td>Компьютерная диагностика и ремонт</td>
+              <td>от 1600</td>
+            </tr>
+            <tr>
+              <td>Кузовной ремонт</td>
+              <td>Восстановление геometrии, покраска</td>
+              <td>расчёт индивидуально</td>
+            </tr>
+            <tr>
+              <td>Ремонт кондиционера</td>
+              <td>Диагностика и заправка</td>
+              <td>3000</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2">
+                Точная стоимость определяется после диагностики автомобиля.
+              </td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      Тел: <a href="tel:+79375817104">+7 (937) 581-71 04</a> Email:
+      <a href="mailto:info@avtoservis.ru">info@avtoservis.ru</a>
+    </footer>
+  </body>
+</html>
